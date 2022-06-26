@@ -5,6 +5,9 @@ body{
     box-sizing: border-box;
     background-color: #F3F3F3;
 }
+.container{
+    width: 100%;
+}
 .conteudo{
     width: 100%;
     height: 80px;
@@ -13,6 +16,7 @@ body{
     position: fixed;
     top: 0;
     right: 0;
+    background-color: #F3F3F3;
 }
 .conteudo img{
     margin-top: 16px;
@@ -87,7 +91,11 @@ body{
 
 }
 
+.privado{
+    background-color: crimson;
+    width: 100%;
 
+}
     
 .pessoas{
     background-color: #FFFFFF;
@@ -96,23 +104,21 @@ body{
     height: 100%;
 }
 .conversa{
+    padding-bottom: 85px;
     margin-top: 106px;
     width: 100%;
-    
-    
 }
 .conversa .envia{
     background-color: #DCDCDC;
-    height: 40px;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
 .conversa .recebe{
     background-color: #FFFFFF;
-    height: 40px;
     display: flex;
     align-items: center;
-    
+    margin-bottom: 4px;
 }
 .enviarmensagem{
     width: 100%;
@@ -122,7 +128,7 @@ body{
    right: 0;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -135,4 +141,15 @@ body{
     margin-right: 18px;
     font-size: 26px;
     
+}
+.enviarmensagem input{
+    width: 85%;
+    height: 80px;
+    border: none;
+}
+strong{
+    font-weight: 700;
+}
+h2 {
+    color: #adacac;
 }
