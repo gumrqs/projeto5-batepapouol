@@ -92,8 +92,9 @@ body{
 }
 
 .privado{
-    background-color: crimson;
+    background-color: #FDDEDE;
     width: 100%;
+    word-wrap: break-word;
 
 }
     
@@ -113,12 +114,14 @@ body{
     display: flex;
     align-items: center;
     margin-bottom: 4px;
+    word-wrap: break-word;
 }
 .conversa .recebe{
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     margin-bottom: 4px;
+    word-wrap: break-word;
 }
 .enviarmensagem{
     width: 100%;
@@ -149,6 +152,7 @@ body{
 }
 strong{
     font-weight: 700;
+    margin: 0px 5px;
 }
 h2 {
     color: #adacac;
