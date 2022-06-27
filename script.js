@@ -79,7 +79,9 @@ function enviarMensagem(){
         to: "Todos" ,
         text: texto ,
         type: "message" ,
+        
     };
+  
     
     const promise = axios.post(
         "https://mock-api.driven.com.br/api/v6/uol/messages", novaMensagem
@@ -133,5 +135,15 @@ function renderizarMensagem(){
     ultimaMensagem.scrollIntoView(); 
 }
 
-
-
+document.addEventListener("keypress", function(e) {
+    if(e.key === 'Enter') {
+        console.log("apertou o enter")
+        enviarMensagem();
+    
+        const botao = document.querySelector("#send");
+      
+      botao.click();
+      console.log("o click foi")
+    
+    }
+  }); 
