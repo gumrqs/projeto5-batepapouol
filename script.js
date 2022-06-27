@@ -32,7 +32,7 @@ function enviarparticipante(){
         if(resposta.status === 200) {
             intervaloConexao = setInterval(manterConexao,5000);
             buscarMensagem();
-            /* intervaloAtualizarMensagens = setInterval(buscarMensagem, 3000); */
+            intervaloAtualizarMensagens = setInterval(buscarMensagem, 3000); 
         }
     });
 
@@ -43,7 +43,6 @@ function enviarparticipante(){
 }
 
 function manterConexao (){ 
-    console.log('entrei no manter conexão')
     const usuario = 
     {
         name: nome 
@@ -81,7 +80,7 @@ function enviarMensagem(){
         text: texto ,
         type: "message" ,
     };
-
+    
     const promise = axios.post(
         "https://mock-api.driven.com.br/api/v6/uol/messages", novaMensagem
     );
@@ -103,18 +102,18 @@ function renderizarMensagem(){
     mensagens.forEach((mensagem) => { 
         if(mensagem.type === "status"){
             mensagemHtml += `<div class="envia">
-                <p> <h2>(${mensagem.time})</h2> <strong>${mensagem.from}</strong> ${mensagem.text} </p>
+                <p> <span>(${mensagem.time})</span> <strong>${mensagem.from}</strong> ${mensagem.text} </p>
             </div>`  
         }
         else if((mensagem.type === "private_message") && (mensagem.from === nome || mensagem.to === nome)){ 
             mensagemHtml += `<div class="privado"> 
-                    <p><h2>(${mensagem.time})</h2> <strong>${mensagem.from}</strong>  reservadamente para <strong>${ mensagem.to}:</strong> ${mensagem.text}
+                    <p> <span>(${mensagem.time})</span> <strong>${mensagem.from}</strong>  reservadamente para <strong>${ mensagem.to}:</strong> ${mensagem.text}
                     </div> `
                     
         }
         else if (mensagem.type === "message") {
             mensagemHtml +=  `<div class="recebe">
-                <p><h2>(${mensagem.time})</h2> <strong>${mensagem.from}</strong> para <strong>${mensagem.to}:</strong> ${mensagem.text}</p>
+                <p> <span>(${mensagem.time})</span> <strong>${mensagem.from}</strong> para <strong>${mensagem.to}:</strong> ${mensagem.text}</p>
             </div>`  
 
         }
@@ -123,7 +122,6 @@ function renderizarMensagem(){
     document.querySelector(".conversa").innerHTML = mensagemHtml;
 
     let todasMensagens = document.querySelector(".conversa").querySelectorAll("div");
-    console.log(todasMensagens);
     
     let ultimaMensagem;
     todasMensagens.forEach((mensagem, index)=> { 

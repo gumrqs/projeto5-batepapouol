@@ -6,7 +6,7 @@ body{
     background-color: #F3F3F3;
 }
 .container{
-    width: 100%;
+    width: 100vw;
 }
 .conteudo{
     width: 100%;
@@ -27,83 +27,7 @@ body{
     margin-top: 25px;
     margin-right: 22.5px;
 }
-.sidebar{
-    display:none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  background-color: rgba(10,23,55,0.5);
-    width: 100%;
-    height: 800px;
-    z-index: 100000;
-}
-.contatos{
-    width: 259px;
-    height: 84px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
-.contatos span{
-    width: 100%;
-    font: Roboto;
-    font-weight: 700;
-    font-size: 16px;
-}
-.todos{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 36px;
-}
-.todos p{
-    margin-left: 7.8px;
-}
-.todos ion-icon{
-    font-size: 23.5px;
-    margin-left: 17.78px;
-}
-.adicionados{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 36px;
-
-}
-.adicionados p{
-    margin-left: 7.8px;
-
-}
-.adicionados ion-icon{
-    font-size: 23.5px;
-    margin-left: 17.78px;
-}
-.visibilidade{
-    font: Roboto;
-    font-weight: 700;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 259px;
-    height: 66px;
-
-}
-
-.privado{
-    background-color: #FDDEDE;
-    width: 100%;
-    word-wrap: break-word;
-
-}
-    
-.pessoas{
-    background-color: #FFFFFF;
-    margin-left: 116px;
-    width: 100%;
-    height: 100%;
-}
 .conversa{
     padding-bottom: 85px;
     margin-top: 106px;
@@ -111,16 +35,35 @@ body{
 }
 .conversa .envia{
     background-color: #DCDCDC;
-    display: flex;
-    align-items: center;
     margin-bottom: 4px;
     word-wrap: break-word;
 }
 .conversa .recebe{
     background-color: #FFFFFF;
-    display: flex;
+    width: 100%;
     align-items: center;
     margin-bottom: 4px;
+   
+    word-wrap: break-word;
+}
+.privado{
+    background-color: #FDDEDE;
+    width: 100%;
+    
+    word-wrap: break-word;
+
+}
+.recebe p{
+    
+    word-wrap: break-word;
+}
+
+.envia p{
+    
+   
+    word-wrap: break-word;
+}
+.privado p{
     word-wrap: break-word;
 }
 .enviarmensagem{
@@ -128,16 +71,12 @@ body{
     height: 80px;
    position: fixed;
    bottom: 0;
-   right: 0;
+   left: 0;
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-}
-.enviarmensagem p{
-    margin-left: 16px;
-    margin-top: 25px;
 }
 .enviarmensagem ion-icon{
     margin-top: 27px;
@@ -154,6 +93,10 @@ strong{
     font-weight: 700;
     margin: 0px 5px;
 }
-h2 {
+span{ 
+    font: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+
     color: #adacac;
 }
